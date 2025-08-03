@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Apple-Inspired Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="bgVideo" playsinline>
+            <!-- Adding multiple source formats for better browser compatibility -->
+            <source src="assets/background.webm" type="video/webm">
+            <source src="assets/background.mp4" type="video/mp4">
+            <!-- Fallback background color if video fails to load -->
+            <!-- <div class="video-fallback"></div> -->
+        </video>
+    </div>
+
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle" class="toggle-label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="ball"></span>
+        </label>
+    </div>
+
+    <header class="glass-nav">
+        <nav>
+            <ul>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="assets/resume.pdf" class="nav-link" download>Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="glass-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm <span class="text-gradient">Ansh Icecreamwala</span></h1>
+                <p class="hero-subtitle">Masters in IT Student | Full Stack Developer | Actively Seeking Internships</p>
+                <div class="hero-scroll">
+                    <span>Scroll</span>
+                    <div class="scroll-line"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="glass-section">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>As a Master's student in Information Technology, I bring a comprehensive understanding of modern software development and a passion for creating efficient, scalable solutions.</p>
+                    <p>I specialize in multiple technologies including JAVA, .NET Core, Android Development, Firebase, C++, and Python. My diverse skill set allows me to adapt to various development environments and tackle complex challenges.</p>
+                    <div class="skills">
+                        <span class="skill-tag">JAVA</span>
+                        <span class="skill-tag">.NET Core</span>
+                        <span class="skill-tag">Android</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-container">
+                        <div class="image-glass"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="glass-section">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project-1.jpg" alt="Firecracker Shop Management">
+                        <div class="project-overlay">
+                            <a href="https://github.com/yourusername/firecracker-shop" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3>Firecracker Shop Management System</h3>
+                    <p>A desktop application built with C# for managing inventory, sales, and customer data for a retail firecracker shop. Features include billing, stock management, and sales reporting.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project-2.jpg" alt="Furniture E-Commerce">
+                        <div class="project-overlay">
+                            <a href="https://github.com/yourusername/furniture-ecommerce" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3>Multi-Vendor Furniture E-Commerce</h3>
+                    <p>Full-stack e-commerce platform built with HTML, CSS, JavaScript, and Bootstrap for frontend, PHP backend, and MySQL database. Supports multiple vendors and buyers in the furniture marketplace.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project-3.png" alt="University Quiz App">
+                        <div class="project-overlay">
+                            <a href="https://github.com/yourusername/university-quiz-app" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3>University Quiz Application</h3>
+                    <p>Android application developed using Java and Firebase, featuring real-time quiz management, student progress tracking, and performance analytics for university assessments.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="glass-section">
+            <div class="section-header">
+                <h2>Latest Thoughts</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-date">December 2023</div>
+                    <h3>Moving from Native Android to Cross-Platform Development</h3>
+                    <p>My journey transitioning between different mobile development frameworks and the lessons learned along the way.</p>
+                    <a href="https://linkedin.com/yourprofile/article1" target="_blank" class="blog-link">Read on LinkedIn <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-date">October 2023</div>
+                    <h3>Firebase vs Traditional Databases</h3>
+                    <p>A comparative analysis of Firebase and traditional SQL databases based on my experience building the University Quiz App.</p>
+                    <a href="https://linkedin.com/yourprofile/article2" target="_blank" class="blog-link">Read on LinkedIn <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-date">August 2023</div>
+                    <h3>Building Scalable E-Commerce Solutions</h3>
+                    <p>Key insights from developing a multi-vendor furniture marketplace using PHP and MySQL.</p>
+                    <a href="https://linkedin.com/yourprofile/article3" target="_blank" class="blog-link">Read on LinkedIn <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="glass-section">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Name</label>
+                    <div class="underline"></div>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                    <div class="underline"></div>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <label for="message">Message</label>
+                    <div class="underline"></div>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span>Send Message</span>
+                    <div class="liquid"></div>
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>© 2026 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
