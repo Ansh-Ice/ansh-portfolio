@@ -1120,3 +1120,128 @@ video:invalid + .video-fallback {
         color: white;
     }
 }
+
+/* Projects Carousel */
+.projects-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.projects-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 30px;
+    padding: 20px 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    scroll-snap-type: x mandatory;
+    width: 100%;
+}
+
+.projects-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.projects-slider .project-card {
+    min-width: 300px;
+    flex: 0 0 calc(33.333% - 20px);
+    scroll-snap-align: start;
+}
+
+@media (max-width: 900px) {
+    .projects-slider .project-card {
+        flex: 0 0 calc(50% - 15px);
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-slider .project-card {
+        flex: 0 0 100%;
+    }
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slider-btn.prev-btn {
+    left: -25px;
+}
+
+.slider-btn.next-btn {
+    right: -25px;
+}
+
+@media (max-width: 768px) {
+    .slider-btn.prev-btn {
+        left: -10px;
+    }
+    .slider-btn.next-btn {
+        right: -10px;
+    }
+}
+
+/* Achievements & Certifications */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.achievements-list h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent-color);
+}
+
+.achievements-list ul {
+    list-style: none;
+}
+
+.achievements-list li {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: var(--glass);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.achievements-list li:hover {
+    transform: translateX(5px);
+    border-color: var(--accent-color);
+}
+
+.achievements-list strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--text);
+}
