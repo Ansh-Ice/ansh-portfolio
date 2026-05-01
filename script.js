@@ -103,50 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ease: 'power3.out'
     });
     
-    // Contact form submission
-    const contactForm = document.getElementById('contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const submitBtn = this.querySelector('.submit-btn');
-            const submitText = submitBtn.querySelector('span');
-            
-            // Simulate form submission
-            submitText.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
-            // In a real implementation, you would use fetch() to send the data to your server
-            setTimeout(() => {
-                submitText.textContent = 'Message Sent!';
-                
-                // Reset form
-                setTimeout(() => {
-                    contactForm.reset();
-                    submitText.textContent = 'Send Message';
-                    submitBtn.disabled = false;
-                    
-                    // Show success message
-                    const successMessage = document.createElement('div');
-                    successMessage.textContent = 'Thank you for your message! I will get back to you soon.';
-                    successMessage.style.color = 'var(--accent-color)';
-                    successMessage.style.marginTop = '20px';
-                    successMessage.style.textAlign = 'center';
-                    successMessage.style.fontWeight = '500';
-                    
-                    contactForm.appendChild(successMessage);
-                    
-                    setTimeout(() => {
-                        successMessage.style.opacity = '0';
-                        setTimeout(() => successMessage.remove(), 500);
-                    }, 3000);
-                }, 1000);
-            }, 1500);
-        });
-    }
-    
+
     // Remove or comment out the parallax effect
     /*
     window.addEventListener('scroll', function() {
