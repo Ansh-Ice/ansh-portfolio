@@ -265,4 +265,32 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.remove('active');
         }
     });
+
+    // Contact Form handling with EmailJS
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = contactForm.querySelector('.submit-btn span');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            
+            // IMPORTANT: Replace these with your actual Service ID and Template ID from the EmailJS dashboard
+            emailjs.sendForm('service_portfolio', 'template_ahwy0dg', this)
+                .then(() => {
+                    submitBtn.textContent = 'Message Sent!';
+                    contactForm.reset();
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                    }, 3000);
+                }, (error) => {
+                    console.error('FAILED...', error);
+                    submitBtn.textContent = 'Error! Try Again.';
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                    }, 3000);
+                });
+        });
+    }
 });
